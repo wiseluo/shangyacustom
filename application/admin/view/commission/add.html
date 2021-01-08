@@ -1,0 +1,58 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_nickname')}:</label>
+        <div class="col-xs-12 col-sm-8">
+						<input id="c-user_name" class="form-control user" readonly type="text" value="">
+            <input id="c-user_id" data-rule="required" class="form-control" name="row[user_id]" type="hidden" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Customer_name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-customer_name" class="form-control customer" readonly type="text" value="">
+            <input id="c-customer_id" data-rule="required" class="form-control" name="row[customer_id]" type="hidden" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('House_name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-house_name" data-rule="required" class="form-control" type="text" readonly value="">
+            <input id="c-house_id" data-rule="required" class="form-control" name="row[house_id]" type="hidden" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('House_price')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-house_price" class="form-control" step="0.01" name="row[house_price]" type="number" value="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Commission_rate')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-commission_rate" class="form-control" step="0.01" name="row[commission_rate]" type="number" value="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Commission')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-commission" class="form-control" step="0.01" name="row[commission]" type="number" value="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Description')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-description" class="form-control " rows="5" name="row[description]" cols="50"></textarea>
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
+
+<script src="../../../../assets/js/jquery-1.3.2.min.js"></script>
+<script src="../../../../assets/js/backend/commission_add.js"></script>

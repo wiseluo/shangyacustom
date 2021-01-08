@@ -1,0 +1,82 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_nickname')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_id" data-rule="required" data-source="user/user/index" data-field="nickname" class="form-control selectpage" name="row[user_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" class="form-control" name="row[name]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Phone')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-phone" class="form-control" name="row[phone]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Identity_card')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-identity_card" class="form-control" name="row[identity_card]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Gender')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-gender" class="form-control selectpicker" name="row[gender]">
+                {foreach name="genderList" item="vo"}
+                    <option value="{$key}" {in name="key" value="male"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('House_name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-house_id" data-rule="required" data-source="house/index" class="form-control selectpage" name="row[house_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Adviser_nickname')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-adviser_id" data-rule="required" data-source="auth/admin/index" data-field="nickname" class="form-control selectpage" name="row[adviser_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Intention_room_data')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            
+            <div class="checkbox">
+            {foreach name="intentionRoomDataList" item="vo"}
+            <label for="row[intention_room_data][]-{$key}"><input id="row[intention_room_data][]-{$key}" name="row[intention_room_data][]" type="checkbox" value="{$key}" {in name="key" value=""}checked{/in} /> {$vo}</label> 
+            {/foreach}
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Intention_area_data')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            
+            <div class="checkbox">
+            {foreach name="intentionAreaDataList" item="vo"}
+            <label for="row[intention_area_data][]-{$key}"><input id="row[intention_area_data][]-{$key}" name="row[intention_area_data][]" type="checkbox" value="{$key}" {in name="key" value=""}checked{/in} /> {$vo}</label> 
+            {/foreach}
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

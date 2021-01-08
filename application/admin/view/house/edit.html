@@ -1,0 +1,138 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" class="form-control" name="row[name]" type="text" value="{$row.name}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Tag')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-tag" class="form-control" name="row[tag]" type="text" value="{$row.tag}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Price_sqm')}:</label>
+        <div class="col-xs-6 col-sm-3">
+            <input id="c-lower_price_sqm" class="form-control" step="0.01" name="row[lower_price_sqm]" type="number" value="{$row.lower_price_sqm}">
+        </div>
+        <div class="col-xs-1 col-sm-1">-</div>
+        <div class="col-xs-6 col-sm-3">
+            <input id="c-upper_price_sqm" class="form-control" step="0.01" name="row[upper_price_sqm]" type="number" value="{$row.upper_price_sqm}">
+        </div>
+        <div class="col-xs-1 col-sm-1 no-border no-padding"><span>/m²</span></div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Area')}:</label>
+        <div class="col-xs-6 col-sm-3">
+            <input id="c-lower_area" class="form-control" step="0.01" name="row[lower_area]" type="number" value="{$row.lower_area}">
+        </div>
+        <div class="col-xs-1 col-sm-1">-</div>
+        <div class="col-xs-6 col-sm-3">
+            <input id="c-upper_area" class="form-control" step="0.01" name="row[upper_area]" type="number" value="{$row.upper_area}">
+        </div>
+        <div class="col-xs-1 col-sm-1 no-border no-padding"><span>m²</span></div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Total_price')}:</label>
+        <div class="col-xs-6 col-sm-3">
+            <input id="c-lower_total_price" class="form-control" step="0.01" name="row[lower_total_price]" type="number" value="{$row.lower_total_price}">
+        </div>
+        <div class="col-xs-1 col-sm-1">-</div>
+        <div class="col-xs-6 col-sm-3">
+            <input id="c-upper_total_price" class="form-control" step="0.01" name="row[upper_total_price]" type="number" value="{$row.upper_total_price}">
+        </div>
+        <div class="col-xs-1 col-sm-1 no-border no-padding"><span>万元/套</span></div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-type" class="form-control" name="row[type]" type="text" value="{$row.type}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Delivery_standard')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-delivery_standard" class="form-control" name="row[delivery_standard]" type="text" value="{$row.delivery_standard}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Property_company')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-property_company" class="form-control" name="row[property_company]" type="text" value="{$row.property_company}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Property_right_term')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-property_right_term" class="form-control" name="row[property_right_term]" type="number" value="{$row.property_right_term}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Opentime')}:</label>
+        <div class="col-xs-12 col-sm-8">
+			<input id="c-opentime" class="form-control datetimepicker_edit" name="row[opentime]" type="datetime" data-date-format="YYYY-MM-DD" value="{$row.opentime}" readonly>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Address')}:</label>
+        <div class="col-xs-3 col-sm-3">
+    				<select class="form-control" name="row[province_id]" id="province_id">
+							<option vlaue="{$row.province_id}">{$row.province}</option>
+    				</select>
+            <input id="c-province" class="form-control" name="row[province]" type="hidden" value="{$row.province}">
+        </div>
+        <div class="col-xs-3 col-sm-3">
+    				<select class="form-control" name="row[city_id]" id="city_id">
+    					<option vlaue="{$row.city_id}">{$row.city}</option>
+    				</select>
+            <input id="c-city" class="form-control" name="row[city]" type="hidden" value="{$row.city}">
+        </div>
+        <div class="col-xs-3 col-sm-3">
+    				<select class="form-control" name="row[area_id]" id="area_id">
+    					<option vlaue="{$row.area_id}">{$row.area}</option>
+    				</select>
+            <input id="c-area" class="form-control" name="row[area]" type="hidden" value="{$row.area}">
+        </div>
+        <div class="col-xs-8 col-sm-8 col-sm-offset-2">
+            <input id="c-address" class="form-control" name="row[address]" type="text" value="{$row.address}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Commission_rate')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-commission_rate" class="form-control" step="0.01" name="row[commission_rate]" type="number" value="{$row.commission_rate}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Description')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-description" class="form-control " rows="5" name="row[description]" cols="50">{$row.description}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('House_images')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-house_images" class="form-control" size="50" name="row[house_images]" type="text" value="{$row.house_images}">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="plupload-house_images" class="btn btn-danger plupload" data-input-id="c-house_images" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="true" data-preview-id="p-house_images"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                    <span><button type="button" id="fachoose-house_images" class="btn btn-primary fachoose" data-input-id="c-house_images" data-mimetype="image/*" data-multiple="true"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-house_images"></span>
+            </div>
+            <ul class="row list-inline plupload-preview" id="p-house_images"></ul>
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
+
+<script src="../../../../assets/js/jquery-1.3.2.min.js"></script>
+<script src="../../../../assets/js/backend/address.js"></script>

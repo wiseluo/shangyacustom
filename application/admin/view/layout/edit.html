@@ -1,0 +1,71 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" class="form-control" name="row[name]" type="text" value="{$row.name}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Tag')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-tag" class="form-control" name="row[tag]" type="text" value="{$row.tag}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Build_area')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-build_area" class="form-control" step="0.01" name="row[build_area]" type="number" value="{$row.build_area}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Dwelling_area')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-dwelling_area" class="form-control" step="0.01" name="row[dwelling_area]" type="number" value="{$row.dwelling_area}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Total_price')}:</label>
+        <div class="col-xs-6 col-sm-3">
+            <input id="c-lower_total_price" class="form-control" step="0.01" name="row[lower_total_price]" type="number" value="{$row.lower_total_price}">
+        </div>
+        <div class="col-xs-1 col-sm-1">-</div>
+        <div class="col-xs-6 col-sm-3">
+            <input id="c-upper_total_price" class="form-control" step="0.01" name="row[upper_total_price]" type="number" value="{$row.upper_total_price}">
+        </div>
+        <div class="col-xs-1 col-sm-1 no-border no-padding"><span>万元/套</span></div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Interval')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-interval" class="form-control" name="row[interval]" type="text" value="{$row.interval}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Analysis')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-analysis" class="form-control " rows="5" name="row[analysis]" cols="50">{$row.analysis}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Layout_images')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-layout_images" class="form-control" size="50" name="row[layout_images]" type="text" value="{$row.layout_images}">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="plupload-layout_images" class="btn btn-danger plupload" data-input-id="c-layout_images" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="true" data-preview-id="p-layout_images"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                    <span><button type="button" id="fachoose-layout_images" class="btn btn-primary fachoose" data-input-id="c-layout_images" data-mimetype="image/*" data-multiple="true"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-layout_images"></span>
+            </div>
+            <ul class="row list-inline plupload-preview" id="p-layout_images"></ul>
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

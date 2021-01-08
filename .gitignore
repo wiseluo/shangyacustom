@@ -1,0 +1,16 @@
+/Application/Runtime/
+/runtime/
+/Application/Html/
+/vendor/
+/public/build/
+/public/data/
+/public/bower_components/
+/public/node_modules/
+.DS_Store
+.svn
+.php_cs.cache
+.idea
+.phpstorm.meta.php
+/Runtime-test
+
+
